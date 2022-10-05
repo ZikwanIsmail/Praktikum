@@ -1,0 +1,77 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package zikwan_praktikum7;
+
+/**
+ *
+ * @author Praktikan
+ */
+public class Zikwan_Praktikum7 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+//       Mahasiswa mhs = new Mahasiswa();
+//        mhs.printData();
+//        mhs.hitungNA(null);
+        
+        Mahasiswa mhs2 = new Mahasiswa("Zikwan "," 2117051051", 90,95,80);
+    mhs2.printData("ilmu Komputer");
+    int result = mhs2.sumValue();
+    System.out.println(result);
+    
+    }
+    
+    
+}
+
+
+CLASS
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package zikwan_praktikum7;
+
+
+public class Mahasiswa {
+    private final String npm;
+    private String nama;
+    public double nilaiTugas,nilaiUas,nilaiUts,NA;
+
+
+public void printData(){
+System.out.println("Npm\t : " + this.npm);
+System.out.println("Nama\t : " + this.nama);
+}
+public int sumValue(){
+    return 5 + 3;
+}
+public void printData(String jurusan){
+System.out.println("Npm\t : " + this.npm);
+System.out.println("Nama\t : " + this.nama);
+System.out.println("Jurusan\t :" + jurusan);
+}
+public void hitungNA(){
+    this.NA = (nilaiTugas*0.3) +(nilaiUas*0.35) +(nilaiUts*0.35); 
+}
+public void hitungNA(double nilaiTugas, double nilaiUas, double nilaiUts){
+     this.NA = (nilaiTugas*0.3) +(nilaiUas*0.35) +(nilaiUts*0.35); 
+}
+public void hitungNA(String pesan){
+    System.out.println("Nilai Tidak Valid");
+    
+}
+public Mahasiswa(String nama, String npm, double nilaiTugas , double nilaiUas, double nilaiUts){
+    this.nama = nama;
+    this.npm = npm ;
+    this.nilaiTugas = nilaiTugas;
+    this.nilaiUas = nilaiUas;
+    this.nilaiUts = nilaiUts;
+}
+}
